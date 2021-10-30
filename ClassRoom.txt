@@ -1,0 +1,362 @@
+Day1 session: 30-October-2020
+=============================
+
+Why java?
+WORA - Write Once Run Anywhere
+     - PlatformInDependency (.class/Byte code)
+IDE : integrated Development Environemnt
+
+IDE - netBeans, eclipse, IJ
+
+How much do I need JAVA for test automation?
+
+Step 1:
+Set up the enviroment: 
+    NetBeans, ItelliJ
+    Install Java and Eclipse(IDE)
+    IDE- Integrated Development Environment
+
+About Eclipse: 
+   Editor, console.
+   Create a Maven project, Package, class - java Codes
+   Groupid : Name of the company/Organisation
+   Artifact id : UPPER Case
+
+
+Naming Conventions:
+Class:
+1. First letter - Uppercase followed by the lower case
+
+      MyFirstJavaProgram - pascal case 
+      myfirstprogram - not to be followed
+2. No spaces to be used
+
+Structure:
+
+
+Create a (Maven) project Same as Group id - 
+com.testleaf
+Create a package (Lower case)
+Craete a class (Pascal case)
+
+Java Reserved Keywords: bold, lowerCase
+
+Step 2:
+------
+Naming conventions for class:(Pascal case)
+          - Pascal Case (PascalCase): In this the first letter of every word is in capital letter.
+
+         MyFirstJavaProgram
+
+
+Create a small java program 
+               main method 
+                public : To call by JVM from anywhere we declare as public.
+                static : without existing object also JVM has to call this method so declared as static.
+                void : main method wont return anything to JVM hence declared as void.
+                main() : name of the method
+                (String [ ] args) :   These are command line arguments used to receive input from user
+1. Open a new Maven project
+2. Create a new package - week1.day1
+3. Create a new class 
+4. Include a print statement
+5. Execute the code
+
+
+Execute:
+---------
+1. right click --> runAs --> Java Application
+2. cntrl F11
+3. Click on the Run butoon on the menuBar
+
+  	   Compile - Shortcuts cntrl F11 or RunAs--> java Application --> green button
+
+Platform Independant:
+---------------------
+class file ( Byte code- OS independant)
+
+C:\Sheriba\TrainingWorkSpace\OCTOBER30SELENIUM\target\classes\week1\day1
+
+    Explain the platform dependency:  
+
+To view the Project folder in the system explorer:
+--------------------------------------------------
+   click on Project --> Properties --> show in System Explorer
+
+
+Java Reserved Keywords: Purple + Bold
+                        We cannot chnage 
+
+******************************************************
+Data types:
+-----------
+example : mobile phone
+
+
+properties/Attributes
+   data(literals)
+model  - y57  - 
+color  - Red
+size   - 6.5
+memory - 256
+OS     - Android11
+isWirelessCharge - No
+weight - 160
+cameraPixel - 125
+IMEINum - 1234569874123654
+Types:
+
+1. Primitive dat type :
+int, char, float, short, byte, double, long, boolean
+ 
+2. Non primitive data type:(class)
+String, Arrays..
+Phone:
+
+Look and feel: Properties:
+
+size  - 14.5 
+shape - rectangle
+IMEI - 273738328283I
+color - black
+brand - S
+cameraCount -3
+OS - ios
+version - 12.0
+resolution - 1080
+weight 100
+isTouchScreen yes
+iswaterProof yes
+
+
+variable -
+
+
+=================================================
+Operators:
+---------
++  : add 
+-  : subtract
+*  : multiply
+/  : divide  ( 4/2 = quotient : 2)
+%  : modulo  ( 4%2 = reminder : 0)
+<
+>
+<=
+=  : assignment operator
+== : comparison operator  ( 6 == 6)
+!= : not equal
+
+===================================================
+
+Control Statements:
+******************
+1.Iterative/looping:
+2. Conditional 
+3. Jump 
+
+1. Iterative/looping:
+
+for:
+
+print all the even numbers from 1 to 50
+
+-- Get the integer
+--  for(int num = 1; num<= 50; num++){
+--       if()- check if the nymber is even
+    }
+--
+
+int number = 23546;
+while(quotient!=0){
+int sum =0;
+quotient = number/10;
+remainder = number%10;
+sum = sum + remainder;
+number = quotient; 
+}
+ 
+2. Conditional:
+    If, if-else, if-elseif
+
+
+3. Jumping Statements
+break, continue, return
+
+Conditional:
+------------
+
+check if a number is positive or negative
+
+check if a number is positive or negative or neutral
+
+
+ClassRoom 1:
+************
+Get an integer
+int num = 21;
+
+If the number is divisible both by 3 and 5, print as TRIZZ-FIZZ
+If the number is divisible by 3, print as TRIZZ
+If the number is divisible by 5, print as FIZZ
+
+
+21 --> TRIZZ
+20 --> FIZZ
+
+15 --> TRIZZ-FIZZ
+
+
+
+ClassRoom2:
+***********
+Print all the even numbers from 0 to 50
+
+else
+not divisible both by 3 or 5
+
+ % - remainder
+    number%3 -> remainder =0
+if(number%3 ==0 && number%5 ==0){
+
+}
+
+ClassRoom2:
+
+Print all the even numbers from 0 to 50
+step 1: for loop : 0, i<=50; i++
+     {
+         if(i%2==0){
+
+     }
+
+// 
+
+
+Output:
+
+                20 is an even number 
+                22 is an even number
+                24 is an even number
+
+
+
+ITERATIVE/Looping Statement:
+----------------------------
+when do I use?
+for
+while
+do-while
+
+
+for(initialization;condition;iteration){
+}
+
+while loop:
+**********
+
+repetitive tasking:
+
+for loop:
+Assignments : 10 programs
+time: 2 hrs 11.00 till 1.00 
+And leave
+
+while loop: 
+Assignments : 10 programs
+time:  - NO -
+only when you complete, you may leave
+
+****************
+sumOfDigits:
+-----------
+
+int number = 123;
+int quotient, reminder ;
+
+1+2+3 = 6
+
+123/10 --> q = 12; R = 3
+
+12/10  --> q = 1; R = 2
+
+1/10 --> q = 0.1 ( q = 0); R = 1
+
+0/10
+
+while(the quotient is not zero)
+{
+}
+
+java :
+
+1. modulo number%10, Q, R
+2. quotient%10
+3. collect all the reminder and add 
+
+continue:
+0
+1
+2
+4
+5
+ out of the for loop
+
+break:
+0
+1
+2
+3
+ out of for loop
+
+return:
+0
+1
+2
+
+***********************************************************
+Class and Object:
+------------------
+
+
+Class : Blueprint for the object. 
+        IT is from this the objects are created/replicated
+
+Object: An entity that has both state and behavior.
+        It is an instance of the class
+
+Phone: 
+------
+
+1. variables:
+
+   properties/ State of an object 
+   Look and feel / attributes
+   data or informations
+   Instance variable - Global 
+
+2. method:
+
+Actions by object/ Behaviour
+ Local variables
+  makeCalls()
+  postMsg()
+  takePics()
+  playgames()
+  watchVideos()
+  payBills()
+
+Object : Has State/Behaviour
+LearnObjectsClass samsung = new LearnObjectsClass();
+
+Class : Blueprint for an Object
+1. Create a class
+2. Declare Instance variables ( at class level)
+3. Define few methods
+4. Inside the main method, Create an object for the class
+5. Call the Instance variables and all the methods using the object created
+
+Take away:
+1. variables : state/attribute
+2. methods : Behaviour
+3. Class components ( methods,Variables) can be accessed only through the objects
