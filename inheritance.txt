@@ -1,0 +1,17 @@
+Inheritance:
+==============
+- We can access one class property from another class without creating multiple objects
+- Class properties can be reused
+- We can reduce the memory wastage
+
+syntax:
+public class sub/child_classname extends super/parent_classname {
+}
+
+Type of Inheritance:
+===================
+Single Inheritance
+Multilevel inheritance
+Multiple Inheritance :not supported in class. Handled through Interface in java
+
+

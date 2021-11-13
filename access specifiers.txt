@@ -1,0 +1,9 @@
+Access Specifiers:
+====================
+public  - Global Level Access (inside Package (extends,objects) + outside package (extends,objects)) with import
+
+protected - (inside Package (extends,objects) + outside package (extends))
+
+default - Package level access (extends,objects), outside the package we can not access default method	
+
+private - Class level access

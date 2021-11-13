@@ -1,0 +1,24 @@
+Polymorphism:
+=================
+More than one forms
+poly: Many
+morphism: forms
+
+Method overloading/static binding/compile time
+-------------------------------------------------------------------
+Class Name: Same
+method name: same
+Arg: Differ
+-------------------
+Depends on the datatype
+Depends on the datatype count
+Depends on the datatype order
+
+
+
+Method overriding/Dynamic Binding/Runtime
+----------------------------------------------------------------
+Class Name Differ
+Method Name same
+Arg same
+
