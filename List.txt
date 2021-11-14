@@ -1,0 +1,23 @@
+LIST: can have duplicate elements
+ArrayList: 
+================
+-Mostly used List in realtime
+-Objects are stored as dynamic array with index
+-Faster to fetch objects (faster when compared to LinkedList)
+-Slower for data insert and delete(compared to LinkedList)
+-non synchronized (faster when compared to vector)
+
+LinkedList:
+=================
+-Store values in doubly linked list data structure
+-Slower to fetch objects (compared to ArrayList)
+-Faster for data insert and delete(compared to ArrayList)
+
+
+
+Vector:
+=================
+-Legacy code for collection from 1.0
+-Values are stored as dynamic array with index
+-Synchronized(slower than ArrayList)
+
