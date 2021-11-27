@@ -1,0 +1,196 @@
+Agenda for today
+
+Introduction to TestNg
+TestNg Setup
+Design TestNg XML
+Sequential, Parallel Tests
+Verbose - Enable Logs
+Reporting - index.html 
+Annotations and Hierarchy
+Real-time usecases for Annotations
+Attributes for Annotations
+Real-time usecases for Attributes
+Recap
+
+-- You do not have write a code --> it is more of a configuration !!
+
+https://testng.org/doc/ --> Official Website
+Book --> Cedric --> Send it in whatsapp !!
+https://github.com/cbeust/testng --> Original source code
+
+Test case --> document that describe the test objective, test steps and expected result
+1483 --> 180+ automate 
+
+Each test case --> 4 to 5 minutes --> 200 tests --> 800 to 1000 minutes --> 
+
+1) Executing one by one manually is not effecient --> Single click --> multiple test 
+
+TestNg --> test runner framework --> helps me to run my tests in specific style
+Junit --> First Java unit testing framework --> TestNg was built for missing features
+Built in Java --> Opensource 
+
+Design XML
+
+1) Convert the test cases from main method to Testng Methods (using @Test and removing main static)
+2) Select the testcases that you like to run and convert to XML
+
+
+Suite ---> All the tests together under one bucket !! 
+Test ---> Group of testcases of same module like Leads, Contacts, Opportunities
+Class ---> Java Class (every .java file)
+Method ---> Every Java method that has @Test annotation --> testcase !!
+
+
+Style
+
+1) Sequential ---> Run each test case after the other 
+2) Parallel --> Run multiple tests in parallel 
+
+Report
+
+-- Eclipse specific test execution report 
+-- Html report (test-output /  index.html)
+
+
+Classroom Assignment !!
+
+Pre-req:
+
+1) Download the https://github.com/TestLeafPages/LeafTaps_Testcases
+2) Extract and copy to your new package (week5.day1)
+3) Change the package name to right name in the java code
+
+Objectives
+
+1) Convert all 5 tests into TestNg tests
+2) Run any 2 tests (create and duplicate) --> sequentially
+3) Run same 2 tests --> parallel 
+
+Purpose of verbose is to enable Testng Logs and it will be usefulk to debug the failed
+testng tests. 
+
+Range: 1 to 10 (Default: 2)
+
+Annotations 
+
+-- 
+
+File types: class, interface, annotation, enum !!
+
+@BeforeSuite
+    @BeforeTest
+        @BeforeClass
+            @BeforeMethod
+                @Test (Mandatory)
+            @AfterMethod
+        @AfterClass
+    @AfterTest
+@AfterSuite
+
+
+Out of the above, only @Test is mandatory annotation for TestNg and all others are optional.
+
+@BeforeGroups, @AfterGroups 
+_________________________________________________________________________________________
+Before Suite  --> Before running all the test cases in the XML file 
+
+Real-time usecases: 
+
+1) Create a database connection for querying data 
+(Only once required for entire test suite)
+
+2) Create the HTML reporting file with date
+
+_________________________________________________________________________________________
+Before Test  --> Before running every module (set of test cases per module)
+
+Real-time usecase: Set the module name for reporting purposes
+(Only once required for entire module)
+
+_________________________________________________________________________________________
+Before Class  --> Before running every class (a java class)
+
+Real-time usecase: Set the author name for java class for reporting purposes
+(Only once required for entire java class)
+
+_________________________________________________________________________________________
+Before Method  --> Before running every test case (before @Test method)
+
+Real-time usecase: Launch the browser, login to application
+(Only once required before @Test)
+
+
+Classroom Assignment
+
+1) Create a base class (BaseTest) 
+2) Create 2 Annotations --> @BeforeMethod, @AfterMethod
+3) @BeforeMethod --> launch to login
+4) @AfterMethod --> close browser
+5) Inside each test case --> extends the BaseTest and remove the repeated lines
+    a) Launch to login b) close
+6) Run the sequential and parallel --> Confirm all is good !!
+
+
+Attributes
+
+-- Methods of the annotations
+-- Each annotations have its own methods like
+
+Our focus --> @Test and common methods (attributes)
+
+invocationCount     : The number of times this method should be invoked.
+// always will run for the same data
+default value : 1
+use case: when you like to create multiple data by running few iterations
+
+enabled             : Whether methods on this class/method are enabled.
+default value : true
+status --> ignored (because it is disabled)
+Use case: When the defect is not fixed, you like to ignore 
+
+timeOut             : The maximum number of milliseconds this test should take.
+default value : 0 sec
+If the overall time takes more than timeout --> test will be failed !!
+Use case: When you are measuring the performance of the test case
+
+
+dependsOnMethods    : The list of methods this method depends on.
+Edit Lead depends on Create Lead
+Which one will run first --> Create Lead
+Edit Lead should run when --> Once create lead is successful !!
+Edit lead should not run when create lead fails or did not run (Skipped)
+
+alwaysRun           : If set to true, this test method will always be run even if it depends on a method that failed.
+default value : false
+Use case: Forcifully run edit lead even when create lead fails as it may have older data
+
+priority            : The priority for this test method. Lower priorities will be scheduled first.
+default value : 0
+
+The tests will run in ascii order when prioritites are same 
+Priority can be applied when only @Test is in the same class
+
+
+
+Test Run Status:
+
+1) Passed
+2) Failed
+3) Ignored
+4) Skipped
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
