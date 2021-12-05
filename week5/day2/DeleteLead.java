@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class DeleteLead extends BaseHooks {
 
-	@Test
+	@Test(groups = "regression")
 	public void runDeleteLead() throws InterruptedException {
 
 		driver.findElement(By.linkText("Find Leads")).click();

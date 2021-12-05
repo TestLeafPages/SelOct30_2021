@@ -1,9 +1,10 @@
 Feature: Login functionality for LeafTaps application
 
-Background:
-Given Open the chrome browser
-And Load the application url
+#Background:
+#Given Open the chrome browser
+#And Load the application url
 
+@smoke @regression
 Scenario Outline: Login using positive credential
 Given Enter the username as <username>
 And Enter the password as <password>
@@ -15,8 +16,21 @@ Examples:
 |'Demosalesmanager'|'crmsfa'|
 |'DemoCSR'|'crmsfa'|
 
+@functional
 Scenario: Login using negative credential
 Given Enter the username as 'Demo'
 And Enter the password as 'crmsfa'
 When Click on Login button
 But Error message should be displayed
+
+
+
+
+
+
+
+
+
+
+
+

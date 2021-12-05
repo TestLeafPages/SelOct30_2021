@@ -1,11 +1,13 @@
 package week5.day2;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -14,8 +16,17 @@ public class BaseHooks {
 	
 	public ChromeDriver driver;
 	
+	public String excelFileName; //initial value is null
+	
+	@DataProvider(indices = 0)
+	public String[][] sendData() throws IOException {
+		String[][] readData = ReadExcel.readData(excelFileName);
+		return readData;
+
+	}
+	
 	@Parameters({"username","password","url"}) //name should be correct;order can be anything
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setup(String uName, String pWord, String url) {//order should be correct; name can be anything
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -31,7 +42,7 @@ public class BaseHooks {
 	}
 	
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		driver.close();
 

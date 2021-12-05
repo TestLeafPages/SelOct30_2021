@@ -3,12 +3,21 @@ package week5.day2;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class EditLead extends BaseHooks {
+	
+	@BeforeTest(alwaysRun = true)
+	public void setValues() {
+		excelFileName = "EditLead";
+	}
 
-	@Test(dataProvider = "sendData")
+	
+
+	@Test(dataProvider = "sendData", groups = "functional")
 	public void runEditLead(String company, String phNo) throws InterruptedException {
 
 		driver.findElement(By.linkText("Find Leads")).click();
@@ -23,12 +32,6 @@ public class EditLead extends BaseHooks {
 
 	}
 	
-	@DataProvider
-	public String[][] sendData() throws IOException {
-		ReadExcel re = new ReadExcel();
-		String[][] readData = re.readData("EditLead");
-		return readData;
-
-	}
+	
 
 }
